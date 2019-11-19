@@ -1,0 +1,24 @@
+{
+  "name": "yandex-connect-app",
+  "version": "1.0.0",
+  "description": "Yandex Connect Application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/@betafactory"
+  },
+  "repository": "git://github.com/betafactory/YandexConnectApp.git",
+  "keywords": [
+    "YandexConnectApp",
+    "Yandex",
+    "BetaFactory",
+    "YandexConnect"
+  ],
+  "author": "Sourav Badami",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "electron": "^7.1.1"
+  }
+}
