@@ -4,10 +4,13 @@
   "description": "Yandex Connect Application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "postinstall": "install-app-deps",
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/@betafactory"
+    "registry": "https://npm.pkg.github.com/@betafactory"
   },
   "repository": "git://github.com/betafactory/YandexConnectApp.git",
   "keywords": [
@@ -16,9 +19,37 @@
     "BetaFactory",
     "YandexConnect"
   ],
-  "author": "Sourav Badami",
+  "author": "BetaFactory",
   "license": "Apache-2.0",
+  "build": {
+    "appId": "tech.betafactory.yandexconnect",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "build/icon.ico"
+    }
+  },
   "devDependencies": {
-    "electron": "^7.1.1"
+    "electron": "^7.1.1",
+    "electron-builder": "^21.2.0"
   }
 }
