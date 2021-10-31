@@ -16,3 +16,7 @@ Yandex Connect Desktop App built with Electron.
 ## Disclaimer
 
 Yandex Connect Desktop is a third-party app and not affiliated with Yandex.
+
+## Where to go from here?
+
+You could join our slack team in case you need any help or have any questions. [Join slack team](https://communityinviter.com/apps/thebetafac$
